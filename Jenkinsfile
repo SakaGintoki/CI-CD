@@ -54,6 +54,26 @@ pipeline {
                 }
             }
         }
+        stage('Health Check') {
+            steps {
+                script {
+                    echo "Waiting for services to start..."
+                    // Menunggu 10 detik agar Flask/Gunicorn benar-benar up
+                    sleep 10
+                    
+                    echo "Checking endpoint health..."
+                    try {
+                        // -f: fail silently pada server error
+                        // -s: silent mode (tidak menampilkan progress bar)
+                        sh "curl -f -s http://localhost:${APP_PORT}/health || exit 1"
+                        echo "Health check passed!"
+                    } catch (Exception e) {
+                        echo "Health check failed! Services might not be responding."
+                        error "Deployment failed health check."
+                    }
+                }
+            }
+        }
     }
 
     post {

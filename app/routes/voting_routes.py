@@ -92,3 +92,7 @@ def results(voting_id):
     voting = Voting.query.get_or_404(voting_id)
     total_votes = sum(option.vote_count for option in voting.options)
     return render_template('results.html', voting=voting, total_votes=total_votes)
+
+@voting_bp.route('/health')
+def health_check():
+    return {"status": "healthy"}, 200

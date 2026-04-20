@@ -41,7 +41,7 @@ Pastikan Docker sudah terinstal di sistem Anda.
 docker build -t app ./app
 
 # Jalankan container
-docker run -p 8081:5000 app
+docker run -p 8083:5000 app
 ```
 Aplikasi akan tersedia di: **`http://localhost:8081`**
 

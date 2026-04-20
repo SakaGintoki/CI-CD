@@ -94,16 +94,15 @@
 
   🔗 API Endpoints
 
-  ┌────────┬───────────────┬──────────────────────────┐
-  │ Method │ Endpoint      │ Deskripsi                │
-  ├────────┼───────────────┼──────────────────────────┤
-  │ GET    │ /             │ Beranda (Daftar Poll)    │
-  │ GET    │ /votings      │ JSON API Daftar Poll     │
-  │ GET    │ /votings/<id> │ Detail Poll & Form Vote  │
-  │ POST   │ /votings      │ Membuat Poll Baru        │
-  │ POST   │ /vote         │ Mengirim Suara           │
-  │ GET    │ /results/<id> │ Visualisasi Hasil Voting │
-  └────────┴───────────────┴──────────────────────────┘
+| Method | Endpoint       | Deskripsi                  |
+|--------|--------------|---------------------------|
+| GET    | /            | Beranda (Daftar Poll)     |
+| GET    | /votings     | JSON API Daftar Poll      |
+| GET    | /votings/<id>| Detail Poll & Form Vote   |
+| POST   | /votings     | Membuat Poll Baru         |
+| POST   | /vote        | Mengirim Suara            |
+| GET    | /results/<id>| Visualisasi Hasil Voting  |
+
   ---
 
   ⚙️ Integrasi Jenkins

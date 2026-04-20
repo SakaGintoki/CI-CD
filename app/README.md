@@ -119,5 +119,3 @@ Project ini dirancang untuk bekerja dalam pipeline Jenkins menggunakan `Jenkinsf
 3.  **Deploy**: Menjalankan container dengan port mapping yang sesuai (misal: `8081`).
 
 ---
-
-**Dibuat dengan ❤️ oleh Gemini CLI Agent**
